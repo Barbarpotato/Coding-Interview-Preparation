@@ -99,8 +99,6 @@ From this, we can see that it is not O(1) because the answer is not immediate. I
 
 To gain greater insight into how the log values are only a gradual rise, look at a log table up to 100,000,000. This lens shows that O(log n) incurs only a minimal processing cost. Running a binary search on an array with any n values will, in a worst-case scenario, always make the number of computations found in the log values column. 
 
-<img src='https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/RNlpuXOAQeCug3r_qI066A_80356e91adc4416a85da712e9a54e8e1_Time-complexity-image-5.png?expiry=1681776000000&hmac=Le1vv2nkVX7LO_Y1jMLZrt5tx0QIeqb7z8Bx1MTywLY'>
-
 `O(n^2)` is heavy on computation. This is quadratic complexity, meaning that the work is doubled for every element in the array. An excellent way to visualize this is to consider that you have a variety of arrays. In keeping with the earlier example, let's explore the following code:
 ```python
 new_array=[] # an array to hold all of the results 
@@ -112,11 +110,17 @@ for i in range(len(array)): # the array has five values, so this is n=5
 
 print(len(new_array)) #how big is this new array ? 
 ```
-The first loop will equal the number of elements input, n. The second loop will also look at the number of input elements, n. So, the overall complexity of running this approach can be said to be n*n which is n^2 (n-squared). To find out how many computations were made, you have to print out the number of times n was used in the loop as below.
+The first loop wi   ll equal the number of elements input, n. The second loop will also look at the number of input elements, n. So, the overall complexity of running this approach can be said to be n*n which is n^2 (n-squared). To find out how many computations were made, you have to print out the number of times n was used in the loop as below.
 
 If you know that the array has 25 elements, then you understand the principles of calculating Big-O notation. To further test your knowledge, how many computations would be required if n = 6? Meaning the array had 6 values? The answer is 6 x 6 so 36. 
 
-## Visual representation of the problem 
-Below is a graphical representation of how n relates to the number of computations taken. 
-<img src='https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/IGySTDFdRFCkwd9ZdoQTnw_382da9f238024333aca779375c0e5ce1_Picture-1-1-.png?expiry=1681776000000&hmac=R0UvHmtb8OnZfUzmW2RuZAyOkXk73bTO-fY-q57XLs0'>
+# Working with Space Complexity
+Some Algorithms like `hash tables` provide very fast lookups in `O(10) time`. However, to work efficiently, they must have a lookup every element stored. This results in a space complexity of O(n). The big O-notation for space complexity is the same as for the time O(1), O(log log n), O(log n) and so on.
+In all these notations `n` refers to the size of the input. This is often measured in bytes.
 
+ Different languages have different memory costs associated with them. In java for instance, an integer requires 4 bytes of memory. A blank array will consume 12 bytes for the header object and an additional 4 bytes for padding. Thus, if n refers to an array of integers size 4, then the total memory requirement is 32 bytes of memory.
+`(4 * 4) + 12 + 4 = 32`
+
+When discussing space complexity, you have to consider what the increase in input size has on the overall usage. Space Compexity is the total of auxiliary space + input space The space complexity of a problem can be broken into two sections namely auxiliary and input space:
+- Auxiliary space is the space required to hold all data required for the solution. It refers to the temporary space needed to compute a given solution. (It means that if we crerate the single array, then the auxiliary space is the header object and additional padding)
+- Input space refers to the space required to add data to the function, algorithm, application or system that you are evaluating. (It means that if we create single array and store an integer, then the size of the integer is the input space for this scene )
