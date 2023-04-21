@@ -122,5 +122,34 @@ In all these notations `n` refers to the size of the input. This is often measur
 `(4 * 4) + 12 + 4 = 32`
 
 When discussing space complexity, you have to consider what the increase in input size has on the overall usage. Space Compexity is the total of auxiliary space + input space The space complexity of a problem can be broken into two sections namely auxiliary and input space:
-- Auxiliary space is the space required to hold all data required for the solution. It refers to the temporary space needed to compute a given solution. (It means that if we crerate the single array, then the auxiliary space is the header object and additional padding)
-- Input space refers to the space required to add data to the function, algorithm, application or system that you are evaluating. (It means that if we create single array and store an integer, then the size of the integer is the input space for this scene )
+- Auxiliary space is the space required to hold all data required for the solution. It refers to the temporary space needed to compute a given solution.
+- Input space refers to the space required to add data to the function, algorithm, application or system that you are evaluating.
+
+Example:
+```js
+const a = 1;
+const b = 10;
+const c = 100;
+const sum = (a, b, c) => a + b + c;
+const d = sum(a, b, c);
+```
+In the above function sum, we can resolve the space complexity required by the memory requirement. Given that all arguments in the above example are integers and the return value is an integer of set size, we know this will be constant.
+
+Given the Number type in JavaScript is 64-bit (8 bytes), we can resolve that the memory requirement for a, b and c is (24). Therefore, the function sum has `O(1)` constant space complexity given that we know the constant requirement of 24 bytes of data space for this function.
+
+Looking at an example in C that requires a dynamic amount of memory in an array:
+```c
+int sum(int a[], int n) {
+    int x = 0;      // 4 bytes for x
+    for(int i = 0; i < n; i++)  // 4 bytes for i
+    {
+        x  = x + a[i];
+    }
+    return(x);
+}
+```
+Firstly, we know that int types in C require 4 bytes of space. Here we note that 4*n bytes of space is required for the array a[] of integers. The remaining variables x, n, i and the return value each require a constant 4 bytes each of memory give that they are integers.
+
+This gives us a total memory requirement of (4n + 12). This itself is `O(n)` linear space complexity since the memory requires linearly increases with input value n.
+
+What is important to note with this example is that the auxiliary space required for the above sum function is actually  `O(1)` constant given that the auxiliary variables are only x and i which totals a (8) memory requirement (constant).
