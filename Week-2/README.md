@@ -48,3 +48,41 @@ To create a tree, one must ensure that there is a root (starting node) and a met
 The approach outlined above for coding a tree is applicable to all the languages covered in this course. There are no concrete implementations of trees, which means that to use them, you are required to implement the code yourself. Another feature that is worth bearing in mind is how a search is performed on a tree. One can code a solution that applies a `depth-first search` or a `breadth-first search`. To better understand this concept, consider how the tree is organized. Each level has a parent node that connects to two child nodes. These child nodes, in turn, have two of their own child nodes:
 - A breadth-first search is one that will examine each node on the same level before stepping into a deeper level. This can be pictured as scanning all nodes horizontally before checking the next level.
 - A depth-first search will examine each node on a branch until the end node is reached before checking the adjacent branch. This can be pictured as a vertical scanning of the tree. 
+
+# Advanced Data Structures
+
+## Hash Tables
+### What is a hashtable?
+[!Alt text](../Week-2/Images//HashTables.png)
+A hashtable offers very quick lookups for an application. This is achieved by creating a hashing function that will create an alpha-numeric (letters and numbers) output(hash key) from a given input. This hash is then used to determine where in memory to store something. This means that when you want to know if an element is in the data structure, instead of looking through every item and making a comparison, you only need to apply the hashing function and see if that item has been hashed to memory. When you consider that a data source might have millions of entries, not having to check every single one is a great time saver. 
+
+## Hash Funcion Method
+There are many ways to hash a string into a hash key:
+- Mid-Square
+- Division
+- etc
+
+### Mid-Square
+Step:
+1. raise the key power and take the middle bits of the power results to be used as a hash key
+2. Represent the character to be a number (a-z) --> (1-26)
+3. if the key is a string then change it to a number
+Example:
+[!Alt text](../Week-2/Images/Mid%20Square.png)
+
+### Division
+step:
+1. Do the division on the key with the modulus operator (according to the number of hash tables)
+2. Represent the character to be a number (a-z) --> (1-26)
+3. if the key is a string then change it to a number
+Example:
+[!Alt text](../Week-2/Images/Division.png)
+
+## Collisions
+Collision in hash tables occurs when two or more keys are hashed to the same location in the hash table. In a hash table, a key is used to access an associated value. When a collision occurs, it means that two or more keys need to be stored at the same location in the hash table, which can cause conflicts in accessing the associated value.
+
+There are several techniques that can be used to handle collisions in a hash table, such as:
+1. Chaining: each hash table slot is filled with a linked list, so if there is a collision, the key can be inserted into the appropriate linked list.
+[!Alt text](../Week-2/Images/Chaining.png)
+2. Open addressing: attempts to place the key in a different hash location if a collision occurs, such as linear probing, quadratic probing, or double hashing.
+[!Alt text](../Week-2/Images/OpenAddressing.png)
