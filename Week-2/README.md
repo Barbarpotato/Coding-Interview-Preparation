@@ -53,7 +53,7 @@ The approach outlined above for coding a tree is applicable to all the languages
 
 ## Hash Tables
 ### What is a hashtable?
-[!Alt text](../Week-2/Images//HashTables.png)
+![Alt text](../Week-2/Images//HashTables.png)
 A hashtable offers very quick lookups for an application. This is achieved by creating a hashing function that will create an alpha-numeric (letters and numbers) output(hash key) from a given input. This hash is then used to determine where in memory to store something. This means that when you want to know if an element is in the data structure, instead of looking through every item and making a comparison, you only need to apply the hashing function and see if that item has been hashed to memory. When you consider that a data source might have millions of entries, not having to check every single one is a great time saver. 
 
 ## Hash Funcion Method
@@ -68,7 +68,7 @@ Step:
 2. Represent the character to be a number (a-z) --> (1-26)
 3. if the key is a string then change it to a number
 Example:
-[!Alt text](../Week-2/Images/Mid%20Square.png)
+![Alt text](../Week-2/Images/Mid%20Square.png)
 
 ### Division
 step:
@@ -76,13 +76,13 @@ step:
 2. Represent the character to be a number (a-z) --> (1-26)
 3. if the key is a string then change it to a number
 Example:
-[!Alt text](../Week-2/Images/Division.png)
+![Alt text](../Week-2/Images/Division.png)
 
 ## Collisions
 Collision in hash tables occurs when two or more keys are hashed to the same location in the hash table. In a hash table, a key is used to access an associated value. When a collision occurs, it means that two or more keys need to be stored at the same location in the hash table, which can cause conflicts in accessing the associated value.
 
 There are several techniques that can be used to handle collisions in a hash table, such as:
 1. Chaining: each hash table slot is filled with a linked list, so if there is a collision, the key can be inserted into the appropriate linked list.
-[!Alt text](../Week-2/Images/Chaining.png)
+![Alt text](../Week-2/Images/Chaining.png)
 2. Open addressing: attempts to place the key in a different hash location if a collision occurs, such as linear probing, quadratic probing, or double hashing.
-[!Alt text](../Week-2/Images/OpenAddressing.png)
+![Alt text](../Week-2/Images/OpenAddressing.png)
