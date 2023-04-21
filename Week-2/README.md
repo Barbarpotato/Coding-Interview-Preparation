@@ -52,17 +52,17 @@ The approach outlined above for coding a tree is applicable to all the languages
 # Advanced Data Structures
 
 ## Hash Tables
-### What is a hashtable?
+`What is a hashtable?`
 ![Alt text](../Week-2/Images//HashTables.png)
 A hashtable offers very quick lookups for an application. This is achieved by creating a hashing function that will create an alpha-numeric (letters and numbers) output(hash key) from a given input. This hash is then used to determine where in memory to store something. This means that when you want to know if an element is in the data structure, instead of looking through every item and making a comparison, you only need to apply the hashing function and see if that item has been hashed to memory. When you consider that a data source might have millions of entries, not having to check every single one is a great time saver. 
 
-## Hash Funcion Method
+`hash Funcion Method`
 There are many ways to hash a string into a hash key:
 - Mid-Square
 - Division
 - etc
 
-### Mid-Square
+`Mid-Square`
 Step:
 1. raise the key power and take the middle bits of the power results to be used as a hash key
 2. Represent the character to be a number (a-z) --> (1-26)
@@ -70,7 +70,7 @@ Step:
 Example:
 ![Alt text](../Week-2/Images/Mid%20Square.png)
 
-### Division
+`Division`
 step:
 1. Do the division on the key with the modulus operator (according to the number of hash tables)
 2. Represent the character to be a number (a-z) --> (1-26)
@@ -78,7 +78,7 @@ step:
 Example:
 ![Alt text](../Week-2/Images/Division.png)
 
-## Collisions
+`Collisions`
 Collision in hash tables occurs when two or more keys are hashed to the same location in the hash table. In a hash table, a key is used to access an associated value. When a collision occurs, it means that two or more keys need to be stored at the same location in the hash table, which can cause conflicts in accessing the associated value.
 
 There are several techniques that can be used to handle collisions in a hash table, such as:
@@ -86,3 +86,17 @@ There are several techniques that can be used to handle collisions in a hash tab
 ![Alt text](../Week-2/Images/Chaining.png)
 2. Open addressing: attempts to place the key in a different hash location if a collision occurs, such as linear probing, quadratic probing, or double hashing.
 ![Alt text](../Week-2/Images/OpenAddressing.png)
+
+## Heaps and graphs in different programming languages
+`Terminology`
+Graphs are comprised of nodes and edges. The node is where the data is stored, and the edge is a connection between two nodes. Unlike a tree, nodes do not have to be connected and can exist independently from the other nodes. An edge connects two nodes. An edge can be said to have a weight. This is a value that is stored in the connection that infers some information on the strength of the connection between the two nodes. A graph can be said to be directed, this means that the edges are focused (like a one-way street) or undirected (like a two-way street) and the connection infers information back and forth.
+
+`Heaps`
+Heaps are implemented differently in different languages but are essentially graphs with specific constraints. Heaps sort information in order so that they can quickly return min and max values. Thus, they employ a binary approach, and any implementation must have a maximum of two nodes. Depending on the implementation, a heap will have the largest or smallest value as the root. Finally, each branch of the heap will follow a sequential pattern. 
+
+A heap has an O(1) lookup time because it only returns one item. The highest or lowest value depends on whether it is a min or max heap. This means that once this value is popped, the following item is pushed onto the root node of the heap. This also impacts inserting onto a heap. When a new element is added, beginning at the root, it is compared to each node until the correct position is determined. The surrounding elements are then moved to ensure that it is placed in the appropriate position.
+Exmaple of Max Heap (Inserted and removal item)
+`Inserted Item`
+![Alt text](../Week-2/Images/HeapInserted-removebg-preview.jpg)
+`Removal Item`
+![Alt text](../Week-2/Images/RemoveHeap-removebg-preview.jpg)
