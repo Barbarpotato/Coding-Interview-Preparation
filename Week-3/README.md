@@ -1,6 +1,7 @@
 # Sorting And Searching
 ## Selection Sort
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://www.youtube.com/watch?v=g-PGLbMth_g)
+[![Watch the video](/Week-3/Images/SelectionSort.png)](https://www.youtube.com/watch?v=g-PGLbMth_g)
+<br>
 Selection sort is a sorting algorithm that works from a very simple principle. Take an array to items and iterate from left to right. Starting with the first place on the index, iterate over the entire array and swap this value with the lowest value found to the right of this item. Repeat until the entire array is sorted. 
 Selection Sort has:
 - Worst case time complexity is O(N^2)
@@ -31,7 +32,8 @@ There are four considerations to be made when evaluating this algorithm.
 4. Finally, what is the space complexity of this approach? Because an in-place swap is being performed, no temporary array is required. There are three temporary variables i, j and min_index; however, these are not dependent on the list size. So, the image doubles the list, and the space complexity does not increase accordingly. Therefore, space complexity = O(1). 
 
 ## Quicksort
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://www.youtube.com/watch?v=qlXDoaZ2FqI)
+[![Watch the video](/Week-3/Images/Quicksort.png)](https://www.youtube.com/watch?v=qlXDoaZ2FqI)
+<br>
 Quicksort is a sorting approach that uses a divide-and-conquer methodology. Given an array of items, a place is determined on the array on which to split the array and this is called the pivot point. All values greater than this point go to the right and all values less than this point go to the left. In this step, you have two arrays. The same process is applied to these arrays until there are no elements left to sort. 
 
 Quicksort has:  
