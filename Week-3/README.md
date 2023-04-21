@@ -81,3 +81,40 @@ Things to consider when evaluating this algorithm:
 - Average case scenario: an average pivot point is selected at every call. This will reduce the number of additional iterations required. So, there will be n iterations and an ever-decreasing logn iterative calls, O(n*logn). 
 - Best case scenario: The middle value is always selected, and the iteration space is halved at every iteration, O(n*logn).
 - The iterative nature of the algorithm will impact the space complexity because the function call and variables are retained on the stack while the calculations are performed. However, the decision to use an in-place swap means no new array needs to be created, O(log n).
+
+## Linear Search
+A linear search is the most direct way of retrieving an item. It means that the search starts at the first item and iterates until either the target item is found or there are no more items left in the array to check. 
+
+Given a list of numbers, start at index location 0 and compare each item with a target variable. Return when the index location has been determined or the entire list has been checked and there is no instance of the target element.
+
+![Alt text](../Week-3/Images/LinearSearch.png)
+
+These are the outcomes to consider when evaluating the efficacy of the search. 
+- Worst case: The item is absent from the list. To determine this, every possible location in the list size n has to be searched. O(n) time complexity.
+- Average case: The element is found in the middle. This is considered an outcome of O(n).
+- Best case: The item is found at the starting index and no further checks are required, so O(1).
+- Space complexity: No additional space is required to perform the search. So, the space required will only be as large as the items that have to be stored in the list, space complexity O(n).
+
+## Binary Search
+A binary search is performed by first identifying the mid-point on a sorted list, comparing the target element to it and discarding the half that is less than the target element. This halving at the mid-point is repeated until the target element is found or there is no more list to half. 
+
+To conduct a binary search, the list must first be sorted.
+
+![Alt text](../Week-3/Images/BinarySearchP1.png)
+
+First, a middle point is selected. The value at index 3, is 15. Is this greater than or less than the target element? The search space is broken in two and the left is further examined. 
+
+![Alt text](../Week-3/Images/BinarySearchP2.png)
+
+A new central point is selected. This time there are only three slots to check; index location 1 is at the halfway point. 
+
+
+![Alt text](../Week-3/Images/BinarySearchP3.png)
+
+The target value is found here and no further splits are required. 
+
+These are the outcomes to consider when evaluating the efficacy of the search: 
+- Worst case: The item is absent from the list. Due to the nature of the approach, many items are removed with the use of the logical operators greater than and less than. This means that only n/2 is checked first, then n/4 and n/8. The overall complexity is then O(log N).  
+- Average case: The element is found after several iterations. Again due to the search mechanism, each subsequent call reduces the state space. So, it can be determined that after a medium number of searches, the complexity is O(Log N). 
+- Best case: The item is found at the starting index and no further checks are required, so O(1).
+- Space complexity: No additional space is required to perform the search. So, the space required will only be as large as the items to be stored in the list, space complexity O(n).
