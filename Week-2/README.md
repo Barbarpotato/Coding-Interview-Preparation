@@ -96,7 +96,7 @@ Heaps are implemented differently in different languages but are essentially gra
 
 A heap has an O(1) lookup time because it only returns one item. The highest or lowest value depends on whether it is a min or max heap. This means that once this value is popped, the following item is pushed onto the root node of the heap. This also impacts inserting onto a heap. When a new element is added, beginning at the root, it is compared to each node until the correct position is determined. The surrounding elements are then moved to ensure that it is placed in the appropriate position.
 Exmaple of Max Heap (Inserted and removal item)
-`Inserted Item`
+#### Inserted Item
 ![Alt text](../Week-2/Images/HeapInserted-removebg-preview.jpg)
-`Removal Item`
+#### Removal Item
 ![Alt text](../Week-2/Images/RemoveHeap-removebg-preview.jpg)
