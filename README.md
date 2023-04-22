@@ -1,3 +1,4 @@
+![alt text](https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~M6FLXD5E8YDH/CERTIFICATE_LANDING_PAGE~M6FLXD5E8YDH.jpeg)
 This course consists of four modules. They cover the following topics:
 
 # Module 1: Introduction to the coding interview
